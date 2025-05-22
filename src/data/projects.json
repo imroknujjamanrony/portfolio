@@ -1,0 +1,61 @@
+[ {"id": 1,
+  "projectName": "JobHive - A Hiring Agency & Communication Platform",
+  "description": "JobHive is a dynamic hiring platform that connects job seekers, employers, freelancers, and recruiters. It offers job posting, profile management, real-time messaging, interview scheduling, and secure transactions for faster and more efficient remote hiring.",
+  "coreFeatures": [
+    "Job posting and advanced job search with filters (category, location, salary, etc.)",
+    "Detailed profile and resume management with video introductions",
+    "Application tracking, interview scheduling, and offer letter management",
+    "Real-time chat system using Socket.IO for direct employer-candidate communication",
+    "Integrated ZegoCloud-powered video meetings for one-on-one or panel interviews",
+    "Instant notifications for interviews, job offers, and system messages",
+    "Role-based dashboards for admin, employers, and job seekers",
+    "AI-powered Gemini bot to guide users and enhance interactivity",
+    "Forum and blog sections for community interaction and job-seeking advice",
+    "Free course page with resume tips, interview skills, and presentation guides",
+    "Password reset with secure email integration via NodeMailer"
+  ],
+  "codeLink": "https://github.com/alaminislam34/Hiring-Agency-Communication-Platform",
+  "liveDemo": "https://jobhive-agency.vercel.app/",
+  "image": "/jobhive.png"
+},
+  {"id": 2,
+    "projectName": "EduConnect - An Education Management Platform",
+    "description": "EduManage is a MERN stack education management platform for institutions, tutors, and students. It provides role-based dashboards, class management, and AI-powered support for seamless learning experiences.",
+    "coreFeatures": [
+      "User authentication and role-based dashboards (admin, tutor, student)",
+      "Secure private and protected routes with JWT & Firebase Auth",
+      "Create, update, and manage classes and assignments",
+      "Student enrollment, assignment submission, and progress tracking",
+      "Real-time data updates with TanStack Query",
+      "Notifications and alerts with SweetAlert2",
+      "AI assistant chatbot (Gemini) for interactive help",
+      "Admin features to approve/reject classes and manage users",
+      "Responsive design for all device sizes",
+      "Optional dark/light mode and performance analytics"
+    ],
+    "codeLink": "https://github.com/imroknujjamanrony/edu-connect-client",
+    "liveDemo": "https://educonnect-5a40e.web.app/",
+    "image": "/EduConnect.png"
+  }
+,  
+ 
+ 
+  {"id": 3,
+    "projectName": "MarathonHub - A Marathon Management System",
+    "description": "Marathon Hub, your one-stop platform for exploring and registering for upcoming marathons. Whether you're a seasoned runner or just starting your journey, Marathon Hub helps you discover marathons tailored to your interests and capabilities.",
+    "coreFeatures": [
+    "Comprehensive marathon listings with details like location, date, distance, and registration info",
+    "Responsive design optimized for all devices using Tailwind CSS",
+    "Dynamic data integration using a JSON file and backend query support",
+    "Search functionality to filter marathons by keyword, location, or date",
+    "Interactive UI with modern card layouts and hover effects",
+    "Event detail previews including organizers and short descriptions",
+    "AI-powered bot integration to guide users and answer marathon-related queries",
+    "MongoDB backend for efficient data storage and retrieval",
+    "Admin and user-friendly interface for exploring events"
+  ],
+    "codeLink": "https://github.com/imroknujjamanrony/Marathon-Hub",
+    "liveDemo": "https://marathon-hub-12397.web.app/",
+    "image": "/marathon-hub.png"
+  }
+]
