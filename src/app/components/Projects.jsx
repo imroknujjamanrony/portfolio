@@ -11,8 +11,8 @@ export default function Projects() {
     .catch((error) => console.error("Error fetching projects:", error));
 
   return (
-    <div>
-      <h1>Projects</h1>
+    <div className="">
+      <h1 className="text-4xl text-[#fefefe]">Projects</h1>
       <p>Here are some of my projects</p>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-6">
         {data.map((project) => (
