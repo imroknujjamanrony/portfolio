@@ -41,9 +41,10 @@ export default function Banner() {
           optimized performance, clean architecture, and modern technologies.
         </p>
 
-        <div>
+        <div className="px-4 py-6">
+          {/* Tech stack list */}
           <div className="pt-2 pb-4">
-            <ul className="list-none flex flex-col lg:flex-row gap-3 items-center text-sm font-medium">
+            <ul className="list-none flex flex-wrap gap-3 justify-center lg:justify-start items-center text-sm font-medium">
               <li className="px-4 py-1.5 text-yellow-400 border border-yellow-400 rounded-full bg-transparent hover:bg-yellow-400/10 transition">
                 JavaScript
               </li>
@@ -61,17 +62,24 @@ export default function Banner() {
               </li>
             </ul>
           </div>
-          <div className="flex gap-4 items-center">
-            <button className="bg-transparent border flex items-center gap-1 border-[#00FF9F] text-[#00FF9F] px-6 py-2 rounded-full hover:bg-[#00FF9F] hover:text-black transition-all">
-              Projects <GoProjectSymlink />
-            </button>
-            <button className="flex items-center gap-1 bg-transparent border border-[#00FF9F] text-[#00FF9F] px-6 py-2 rounded-full hover:bg-[#00FF9F] hover:text-black transition-all">
-              Contacts <FaArrowRight />
-            </button>
-            <div className="flex gap-4 text-2xl">
-              <FaLinkedin className="hover:text-[#00FF9F]" />
-              <FaGithub className="hover:text-[#00FF9F]" />
-              <FaTwitter className="hover:text-[#00FF9F]" />
+
+          {/* Buttons + Social icons */}
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 items-center justify-between">
+            {/* Button Group */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <button className="bg-transparent border flex items-center justify-center gap-1 border-[#00FF9F] text-[#00FF9F] px-6 py-2 rounded-full hover:bg-[#00FF9F] hover:text-black transition-all">
+                Projects <GoProjectSymlink />
+              </button>
+              <motion.button className="flex items-center justify-center gap-1 bg-transparent border border-[#00FF9F] text-[#00FF9F] px-6 py-2 rounded-full hover:bg-[#00FF9F] hover:text-black transition-all">
+                Contacts <FaArrowRight />
+              </motion.button>
+            </div>
+
+            {/* Social Icons */}
+            <div className="flex gap-4 text-2xl mt-4 sm:mt-0">
+              <FaLinkedin className="hover:text-[#00FF9F] cursor-pointer" />
+              <FaGithub className="hover:text-[#00FF9F] cursor-pointer" />
+              <FaTwitter className="hover:text-[#00FF9F] cursor-pointer" />
             </div>
           </div>
         </div>

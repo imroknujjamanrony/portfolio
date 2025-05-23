@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import logo from "../../../public/portfolio logo gpt2.png";
 import { usePathname } from "next/navigation";
+import { LuHardDriveDownload } from "react-icons/lu";
 
 export default function Navbar() {
   const pathname = usePathname();
-  console.log(pathname);
   const links = [
     {
       name: "Home",
@@ -34,7 +34,7 @@ export default function Navbar() {
     },
   ];
   return (
-    <div className="navbar  text-white w-11/12 mx-auto shadow-sm">
+    <div className="navbar fixed  text-white w-11/12 mx-auto shadow-sm">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -91,8 +91,9 @@ export default function Navbar() {
       </div>
       <div className="navbar-end">
         <Link href="/contact">
-          <button className="bg-transparent border-2 border-green-300 hover:bg-[#00FF9F] text-white rounded-full px-4 py-1.5 ">
+          <button className="group bg-transparent flex items-center justify-center gap-1 border-2 border-green-300 hover:bg-[#00FF9F] text-white rounded-full px-4 py-1.5">
             Resume
+            <LuHardDriveDownload className="hidden group-hover:inline" />
           </button>
         </Link>
       </div>

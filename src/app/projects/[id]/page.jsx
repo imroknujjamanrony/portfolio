@@ -54,7 +54,6 @@ export default function ProjectDetails({ params }) {
             alt="Project Screenshot"
             className="w-full h-auto object-cover rounded-xl"
           />
-          <h2>rony</h2>
         </div>
 
         {/* Right: Details */}
