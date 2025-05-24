@@ -1,25 +1,4 @@
-// import { useLottie } from "lottie-react";
-// import LottieAnimation from "../../../public/LottieAnimation.json";
-// const LottieAni = () => {
-//   const options = {
-//     animationData: LottieAnimation,
-//     loop: true,
-//     autoplay: true,
-//   };
-
-//   // Apply styles to the container
-//   const style = {
-//     width: "500px",
-//     height: "300px",
-//   };
-
-//   const { View } = useLottie(options);
-
-//   return <div style={style}>{View}</div>;
-// };
-
-// export default LottieAni;
-
+"use client"; // Add this directive at the top
 import { useLottie } from "lottie-react";
 import LottieAnimation from "../../../public/LottieAnimation.json";
 
@@ -28,6 +7,9 @@ const LottieAni = () => {
     animationData: LottieAnimation,
     loop: true,
     autoplay: true,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
   };
 
   const { View } = useLottie(options);

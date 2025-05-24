@@ -8,8 +8,17 @@ import {
   FaArrowRight,
 } from "react-icons/fa";
 import { GoProjectSymlink } from "react-icons/go";
-import Typewriter from "typewriter-effect";
-import LottieAni from "./LottieAni";
+import dynamic from "next/dynamic";
+
+// Dynamically import components with SSR disabled
+const Typewriter = dynamic(() => import("typewriter-effect"), { ssr: false });
+
+const LottieAni = dynamic(() => import("./LottieAni"), {
+  ssr: false,
+  loading: () => (
+    <div className="w-[300px] h-[300px] bg-gray-800/20 animate-pulse rounded-lg" />
+  ),
+});
 
 export default function Banner() {
   return (
@@ -25,13 +34,16 @@ export default function Banner() {
         <h1 className="text-4xl lg:text-6xl font-bold">
           Hello I’m{" "}
           <span className="text-[#00FF9F]">
-            <Typewriter
-              options={{
-                strings: ["Md Roknujjaman", "Rony"],
-                autoStart: true,
-                loop: true,
-              }}
-            />
+            {/* Safety check for window object */}
+            {typeof window !== "undefined" && (
+              <Typewriter
+                options={{
+                  strings: ["Md Roknujjaman", "Rony"],
+                  autoStart: true,
+                  loop: true,
+                }}
+              />
+            )}
           </span>
         </h1>
 
@@ -70,7 +82,10 @@ export default function Banner() {
               <button className="bg-transparent border flex items-center justify-center gap-1 border-[#00FF9F] text-[#00FF9F] px-6 py-2 rounded-full hover:bg-[#00FF9F] hover:text-black transition-all">
                 Projects <GoProjectSymlink />
               </button>
-              <motion.button className="flex items-center justify-center gap-1 bg-transparent border border-[#00FF9F] text-[#00FF9F] px-6 py-2 rounded-full hover:bg-[#00FF9F] hover:text-black transition-all">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="flex items-center justify-center gap-1 bg-transparent border border-[#00FF9F] text-[#00FF9F] px-6 py-2 rounded-full hover:bg-[#00FF9F] hover:text-black transition-all"
+              >
                 Contacts <FaArrowRight />
               </motion.button>
             </div>

@@ -33,7 +33,7 @@ export default function ProjectDetails({ params }) {
   return (
     <div className="min-h-screen px-4 md:px-16 py-10 bg-[#0f172a] text-white space-y-12">
       {/* Title & Description */}
-      <div className="text-center space-y-4">
+      <div className="text-center space-y-4 mt-8">
         <h1 className="text-4xl md:text-5xl font-extrabold text-purple-300">
           {project.projectName}
         </h1>
