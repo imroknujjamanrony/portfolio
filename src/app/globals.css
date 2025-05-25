@@ -65,8 +65,6 @@
   transition: 0.5s;
 }
 
-/*  */
-
 @import "tailwindcss";
 @plugin "daisyui";
 
