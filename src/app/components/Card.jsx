@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Card({ project }) {
   const scrollRef = useRef();
@@ -27,9 +28,14 @@ export default function Card({ project }) {
     <div className=" text-white rounded-xl p-6 shadow-lg flex flex-col md:flex-row gap-6 items-start justify-between">
       {/* Left Section: Text */}
       <div className="flex-1 space-y-4">
-        <h2 className="text-2xl font-bold text-purple-300">
+        <motion.h2
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          className="text-2xl font-bold text-purple-300"
+        >
           {project.projectName}
-        </h2>
+        </motion.h2>
         <p className="text-gray-300">{project.description}</p>
 
         {/* Tech Stack */}

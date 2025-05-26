@@ -19,6 +19,7 @@ import {
   SiPostgresql,
   SiMysql,
 } from "react-icons/si";
+import { motion } from "framer-motion";
 
 const frontendSkills = [
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
@@ -94,7 +95,8 @@ export default function SkillsSection() {
       {/* Skill cards */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center mt-4">
         {getSkills().map((skill) => (
-          <div
+          <motion.div
+            whileHover={{ scale: 1.1 }}
             key={skill.name}
             className="relative w-28 h-28 sm:w-32 sm:h-32 bg-black rounded-xl flex flex-col justify-center items-center gap-2 text-sm group overflow-hidden"
           >
@@ -107,7 +109,7 @@ export default function SkillsSection() {
               {skill.icon}
             </div>
             <span className="z-20 text-sm">{skill.name}</span>
-          </div>
+          </motion.div>
         ))}
       </div>
     </div>
