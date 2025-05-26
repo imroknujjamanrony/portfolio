@@ -1,4 +1,6 @@
+"use client";
 import { FaGraduationCap } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Education() {
   const educationData = [
@@ -35,17 +37,29 @@ export default function Education() {
       background: "Bachelor of Arts - English",
     },
   ];
+
   return (
-    <section id="education" className="py-16 mt-10 px-6   text-white">
-      <h2 className="text-4xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400">
+    <section id="education" className="py-16 mt-10 px-6 text-white">
+      <motion.h2
+        className="text-4xl font-extrabold text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-teal-400"
+        initial={{ opacity: 0, y: -30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.6 }}
+      >
         Educational Qualification
-      </h2>
+      </motion.h2>
 
       <div className="max-w-6xl mx-auto grid gap-8 sm:grid-cols-2 md:grid-cols-2">
         {educationData.map((edu, index) => (
-          <div
+          <motion.div
             key={index}
-            className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 hover:shadow-2xl hover:scale-[1.02] transition-transform duration-300 group"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            whileHover={{ scale: 1.03 }}
+            className="bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 shadow-md hover:shadow-blue-500/20 transition-all duration-300 group"
           >
             <div className="flex items-start gap-4">
               <div className="text-4xl text-blue-400 group-hover:rotate-12 transition-transform duration-300">
@@ -64,7 +78,7 @@ export default function Education() {
                 <p className="text-gray-300">{edu.background}</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

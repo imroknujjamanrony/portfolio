@@ -92,12 +92,16 @@ export default function SkillsSection() {
         ))}
       </div>
 
-      {/* Skill cards */}
+      {/* Skill cards with scroll animation */}
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 justify-items-center mt-4">
-        {getSkills().map((skill) => (
+        {getSkills().map((skill, index) => (
           <motion.div
-            whileHover={{ scale: 1.1 }}
             key={skill.name}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, delay: index * 0.05 }}
+            whileHover={{ scale: 1.1 }}
             className="relative w-28 h-28 sm:w-32 sm:h-32 bg-black rounded-xl flex flex-col justify-center items-center gap-2 text-sm group overflow-hidden"
           >
             {/* animated border */}
