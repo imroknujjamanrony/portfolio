@@ -1,4 +1,5 @@
 "use client";
+
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
@@ -15,21 +16,16 @@ export default function Card({ project }) {
     let animationFrameId;
 
     const scrollStep = () => {
-      if (container.scrollHeight <= container.clientHeight) {
-        // No scrolling needed if content fits
-        return;
-      }
+      if (container.scrollHeight <= container.clientHeight) return;
       scrollY += 1;
       if (scrollY >= container.scrollHeight - container.clientHeight) {
         scrollY = 0;
       }
       container.scrollTop = scrollY;
-
       animationFrameId = requestAnimationFrame(scrollStep);
     };
 
     animationFrameId = requestAnimationFrame(scrollStep);
-
     return () => cancelAnimationFrame(animationFrameId);
   }, []);
 
@@ -38,7 +34,7 @@ export default function Card({ project }) {
     visible: (i) => ({
       opacity: 1,
       x: 0,
-      transition: { delay: i * 0.15 },
+      transition: { delay: i * 0.1 },
     }),
   };
 
@@ -74,9 +70,10 @@ export default function Card({ project }) {
             <motion.li
               key={idx}
               custom={idx}
-              initial="hidden"
-              animate="visible"
               variants={listItemVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
               className="flex items-start gap-2"
             >
               <FaArrowRight className="mt-1 text-purple-400" />
@@ -115,7 +112,7 @@ export default function Card({ project }) {
       <div
         ref={scrollRef}
         className="w-full md:w-[300px] h-[400px] overflow-y-scroll rounded-xl border border-gray-700 shadow-md"
-        style={{ scrollBehavior: "auto" }} // disable smooth scroll for programmatic scrollTop changes
+        style={{ scrollBehavior: "auto" }}
       >
         <img
           src={project.image}

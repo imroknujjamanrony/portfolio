@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import { FaArrowRight } from "react-icons/fa";
 import projects from "@/data/projects.json";
+import { motion } from "framer-motion";
 
 export default function ProjectDetails({ params }) {
   const scrollRef = useRef();
@@ -65,10 +66,17 @@ export default function ProjectDetails({ params }) {
             </h2>
             <ul className="list-disc list-inside space-y-2 text-gray-300">
               {project.coreFeatures.map((feature, idx) => (
-                <li key={idx} className="flex gap-2">
+                <motion.li
+                  key={idx}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, x: -20 }}
+                  transition={{ delay: idx * 0.1 }}
+                  viewport={{ once: false, amount: 0.4 }}
+                  className="flex gap-2"
+                >
                   <FaArrowRight className="mt-1 text-purple-400" />
                   <span>{feature}</span>
-                </li>
+                </motion.li>
               ))}
             </ul>
           </div>
@@ -100,10 +108,17 @@ export default function ProjectDetails({ params }) {
               </h2>
               <ul className="list-disc list-inside space-y-2 text-gray-300">
                 {project.challenges.map((challenge, idx) => (
-                  <li key={idx} className="flex gap-2">
+                  <motion.li
+                    key={idx}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    transition={{ delay: idx * 0.1 }}
+                    viewport={{ once: false, amount: 0.4 }}
+                    className="flex gap-2"
+                  >
                     <FaArrowRight className="mt-1 text-purple-400" />
                     <span>{challenge}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>
@@ -117,10 +132,17 @@ export default function ProjectDetails({ params }) {
               </h2>
               <ul className="list-disc list-inside space-y-2 text-gray-300">
                 {project.futurePlans.map((plan, idx) => (
-                  <li key={idx} className="flex gap-2">
+                  <motion.li
+                    key={idx}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: -20 }}
+                    transition={{ delay: idx * 0.1 }}
+                    viewport={{ once: false, amount: 0.4 }}
+                    className="flex gap-2"
+                  >
                     <FaArrowRight className="mt-1 text-purple-400" />
                     <span>{plan}</span>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
             </div>

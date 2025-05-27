@@ -23,11 +23,21 @@ export default function Home() {
 
       <section className="w-11/12 mx-auto ">
         <Banner />
-        <AboutMe></AboutMe>
-        <SkillsSection />
-        <Education />
-        <Projects />
-        <Contact />
+        <section id="about">
+          <AboutMe></AboutMe>
+        </section>
+        <section id="skills">
+          <SkillsSection />
+        </section>
+        <section id="education">
+          <Education />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
         <Footer />
         <FaArrowCircleUp
           onClick={bottomToTop}
