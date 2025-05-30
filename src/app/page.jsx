@@ -41,7 +41,7 @@ export default function Home() {
         <Footer />
         <FaArrowCircleUp
           onClick={bottomToTop}
-          className="fixed bottom-4 right-3 size-10 z-50 cursor-pointer"
+          className="fixed bottom-4 right-4 size-10 z-50 cursor-pointer"
         />
       </section>
     </>

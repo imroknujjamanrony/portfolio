@@ -48,7 +48,7 @@ export default function Navbar() {
       const element = document.getElementById(sectionId);
       if (element) {
         window.scrollTo({
-          top: element.offsetTop,
+          top: element.offsetTop - 80, // Adjusted for navbar height
           behavior: "smooth",
         });
         setActiveSection(sectionId);
@@ -87,9 +87,9 @@ export default function Navbar() {
     >
       {/* Navbar Start */}
       <div className="navbar-start">
-        {/* Mobile Dropdown */}
-        <div className="dropdown">
-          <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+        {/* Mobile Dropdown - Simplified DaisyUI implementation */}
+        <div className="dropdown lg:hidden">
+          <div tabIndex={0} role="button" className="btn btn-ghost">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="h-6 w-6"
@@ -101,13 +101,13 @@ export default function Navbar() {
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="2"
-                d="M4 6h16M4 12h8m-8 6h16"
+                d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
           </div>
           <ul
             tabIndex={0}
-            className="menu menu-sm dropdown-content mt-3 p-3 gap-1 shadow bg-black/90 backdrop-blur-md rounded-box w-52 text-white"
+            className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-black/90 backdrop-blur-md rounded-box w-52 text-white"
           >
             {links.map((link, index) => (
               <li key={index}>
@@ -206,3 +206,4 @@ export default function Navbar() {
     </motion.div>
   );
 }
+// have to add mouse pointer effefcs
