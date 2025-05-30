@@ -1,7 +1,18 @@
+@import url("https://gei.st/sans.css");
+@import url("https://gei.st/mono.css");
+
+body {
+  font-family: "Geist", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.code-style {
+  font-family: "Geist Mono", monospace;
+}
+
 .box {
   position: relative;
-  width: 400px;
-  height: 400px;
   border-radius: 50%;
   overflow: hidden;
   z-index: 1;

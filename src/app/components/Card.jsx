@@ -43,7 +43,7 @@ export default function Card({ project }) {
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      className="text-white rounded-xl p-6 shadow-lg flex flex-col md:flex-row gap-6 items-start justify-between"
+      className="text-white backdrop-blur-sm bg-black/20 rounded-xl p-6 shadow-lg flex flex-col md:flex-row gap-6 items-start justify-between"
     >
       {/* Left Section: Text */}
       <div className="flex-1 space-y-4">
