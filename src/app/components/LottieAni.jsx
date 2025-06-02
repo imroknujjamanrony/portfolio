@@ -20,3 +20,4 @@ const LottieAni = () => {
 };
 
 export default LottieAni;
+// lottie ani
