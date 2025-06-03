@@ -2,6 +2,7 @@
 import AboutMe from "./components/AboutMe";
 import Banner from "./components/Banner";
 import Contact from "./components/Contact";
+import SnowflakeCursor from "./components/cursor/SnowflakeCursor";
 import Education from "./components/Education";
 
 import Footer from "./components/Footer";
@@ -18,6 +19,7 @@ export default function Home() {
   return (
     <>
       <div className="fixed top-0 left-0 w-full h-full z-0 pointer-events-none">
+        <SnowflakeCursor></SnowflakeCursor>
         <ParticlesBg />
       </div>
 

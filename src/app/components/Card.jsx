@@ -101,7 +101,7 @@ export default function Card({ project }) {
             Live Demo
           </a>
           <Link href={`/projects/${project.id}`}>
-            <button className="bg-gray-700 px-4 py-1 rounded-md hover:bg-gray-600 transition">
+            <button className="bg-gray-700 px-4 py-1 rounded-md btn btn-outline hover:bg-gray-600 text-white transition">
               View Details
             </button>
           </Link>
