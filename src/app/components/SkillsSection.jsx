@@ -66,7 +66,7 @@ export default function SkillsSection() {
   };
 
   return (
-    <div className="text-white space-y-8">
+    <div className="text-white overflow-x-hidden space-y-8">
       <h1 className="flex gap-2 text-5xl font-bold justify-center items-center">
         Skills
         <span className="hover:animate-bounce">
@@ -97,7 +97,7 @@ export default function SkillsSection() {
         {getSkills().map((skill, index) => (
           <motion.div
             key={skill.name}
-            initial={{ opacity: 0, x: index % 2 === 0 ? -60 : 60 }}
+            initial={{ opacity: 0, x: index % 2 === 0 ? -30 : 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, delay: index * 0.05 }}
