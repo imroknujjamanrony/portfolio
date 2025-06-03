@@ -113,7 +113,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href="/"
-          className="btn btn-ghost text-xl flex items-center gap-2"
+          className="btn btn-ghost bg-gradient-to-r from-cyan-500 to-blue-500 text-xl flex items-center gap-2"
           onClick={() => {
             setActiveSection("");
             if (typeof window !== "undefined") {
@@ -126,9 +126,9 @@ export default function Navbar() {
             width={40}
             height={40}
             alt="logo"
-            className="w-8 h-8 sm:w-10 sm:h-10"
+            className="w-8 h-8  sm:w-10 sm:h-10"
           />
-          <h2 className="text-xl sm:text-2xl font-semibold">
+          <h2 className="text-xl  sm:text-2xl font-semibold">
             Roni <span className="text-cyan-300">.</span>
           </h2>
         </Link>
