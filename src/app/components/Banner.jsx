@@ -9,6 +9,8 @@ import {
 } from "react-icons/fa";
 import { GoProjectSymlink } from "react-icons/go";
 import dynamic from "next/dynamic";
+import { smoothScrollTo } from "@/utils/smoothScroll";
+import { useActiveSection } from "@/provider/ActiveSectionProvider";
 
 // Animation Variants
 const containerVariant = {
@@ -39,6 +41,14 @@ const LottieAni = dynamic(() => import("./LottieAni"), {
 });
 
 export default function Banner() {
+  const { setActiveSection } = useActiveSection();
+  const handleScrollTo = (e, sectionId) => {
+    e.preventDefault();
+    smoothScrollTo(sectionId, () => {
+      setActiveSection(sectionId); // Update active section after scroll
+    });
+  };
+
   return (
     <motion.div
       initial="hidden"
@@ -66,7 +76,7 @@ export default function Banner() {
           custom={1}
           className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight"
         >
-          Hello I’m{" "}
+          Hello I'm{" "}
           <motion.span
             whileHover={{ scale: 1.1 }}
             className="text-[#00FF9F] inline-block"
@@ -141,12 +151,14 @@ export default function Banner() {
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <motion.button
+              onClick={(e) => handleScrollTo(e, "projects")}
               whileHover={{ scale: 1.1 }}
               className="border border-[#00FF9F] text-[#00FF9F] px-6 py-2 rounded-full hover:bg-[#00FF9F] hover:text-black transition-all flex items-center gap-2"
             >
               Projects <GoProjectSymlink />
             </motion.button>
             <motion.button
+              onClick={(e) => handleScrollTo(e, "contact")}
               whileHover={{ scale: 1.1 }}
               className="border border-[#00FF9F] text-[#00FF9F] px-6 py-2 rounded-full hover:bg-[#00FF9F] hover:text-black transition-all flex items-center gap-2"
             >
@@ -156,24 +168,44 @@ export default function Banner() {
 
           {/* Social Icons */}
           <div className="flex justify-center lg:justify-start gap-5 text-2xl">
-            <motion.span
-              whileHover={{ scale: 1.2 }}
-              className="cursor-pointer text-white hover:text-[#00FF9F] transition"
+            <a
+              href="https://www.linkedin.com/in/md-roknujjaman-rony-906780210/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaLinkedin />
-            </motion.span>
-            <motion.span
-              whileHover={{ scale: 1.2 }}
-              className="cursor-pointer text-white hover:text-[#00FF9F] transition"
+              <motion.span
+                whileHover={{ scale: 1.2 }}
+                className="cursor-pointer text-white hover:text-[#00FF9F] transition"
+              >
+                <FaLinkedin />
+              </motion.span>
+            </a>
+
+            <a
+              href="https://github.com/imroknujjamanrony"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaGithub />
-            </motion.span>
-            <motion.span
-              whileHover={{ scale: 1.2 }}
-              className="cursor-pointer text-white hover:text-[#00FF9F] transition"
+              <motion.span
+                whileHover={{ scale: 1.2 }}
+                className="cursor-pointer text-white hover:text-[#00FF9F] transition"
+              >
+                <FaGithub />
+              </motion.span>
+            </a>
+
+            <a
+              href="https://x.com/RoknujjamanRon2"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <FaTwitter />
-            </motion.span>
+              <motion.span
+                whileHover={{ scale: 1.2 }}
+                className="cursor-pointer text-white hover:text-[#00FF9F] transition"
+              >
+                <FaTwitter />
+              </motion.span>
+            </a>
           </div>
         </motion.div>
       </motion.div>
