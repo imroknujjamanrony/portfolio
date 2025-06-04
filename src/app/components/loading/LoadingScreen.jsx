@@ -35,3 +35,5 @@ export const LoadingScreen = ({ onComplete }) => {
     </div>
   );
 };
+
+//its a loading screen component that displays a typing effect for the text "<Md Roknujjaman Rony />" and a loading bar animation.
