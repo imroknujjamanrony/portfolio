@@ -25,7 +25,7 @@ const frontendSkills = [
   { name: "HTML5", icon: <FaHtml5 className="text-orange-500" /> },
   { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
   { name: "Tailwind", icon: <SiTailwindcss className="text-cyan-400" /> },
-  { name: "Bootstrap", icon: <FaBootstrap className="text-purple-400" /> },
+  // { name: "Bootstrap", icon: <FaBootstrap className="text-purple-400" /> },
   { name: "React", icon: <FaReact className="text-cyan-300" /> },
   { name: "Next.js", icon: <SiNextdotjs className="text-gray-400" /> },
 ];
@@ -33,13 +33,14 @@ const frontendSkills = [
 const backendSkills = [
   { name: "Node.js", icon: <FaNodeJs className="text-green-500" /> },
   { name: "Express", icon: <FaServer className="text-white" /> },
-  { name: "Python", icon: <FaPython className="text-yellow-300" /> },
-  { name: "Java", icon: <FaJava className="text-red-500" /> },
+  // { name: "Python", icon: <FaPython className="text-yellow-300" /> },
+  // { name: "Java", icon: <FaJava className="text-red-500" /> },
+  // { name: "Java", icon: <FaJava className="text-red-500" /> },
 ];
 
 const databaseSkills = [
   { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
+  // { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
   { name: "MySQL", icon: <SiMysql className="text-yellow-400" /> },
 ];
 
