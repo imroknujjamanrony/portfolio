@@ -38,7 +38,6 @@ const backendSkills = [
   { name: "Java", icon: <FaJava className="text-red-500" /> },
 ];
 
-//hello world kemon ahco sobai
 const databaseSkills = [
   { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
   // { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
