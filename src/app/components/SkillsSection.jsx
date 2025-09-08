@@ -36,10 +36,8 @@ const backendSkills = [
   // { name: "Python", icon: <FaPython className="text-yellow-300" /> },
   // { name: "Java", icon: <FaJava className="text-red-500" /> },
   { name: "Java", icon: <FaJava className="text-red-500" /> },
-  { name: "Java", icon: <FaJava className="text-red-500" /> },
-  { name: "Java", icon: <FaJava className="text-red-500" /> },
 ];
-
+//modified the skills section
 const databaseSkills = [
   { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
   // { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
