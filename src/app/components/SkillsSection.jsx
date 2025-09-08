@@ -36,6 +36,8 @@ const backendSkills = [
   // { name: "Python", icon: <FaPython className="text-yellow-300" /> },
   // { name: "Java", icon: <FaJava className="text-red-500" /> },
   { name: "Java", icon: <FaJava className="text-red-500" /> },
+  { name: "Java", icon: <FaJava className="text-red-500" /> },
+  { name: "Java", icon: <FaJava className="text-red-500" /> },
 ];
 
 const databaseSkills = [
