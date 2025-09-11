@@ -52,8 +52,7 @@ const Contact = () => {
         <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
           Get In Touch
         </h2>
-        {/* hello world kemon acho sobai  */}
-        {/* hello world kemon acho sobai  */}
+
         <div className="grid md:grid-cols-2 gap-12">
           {/* Form */}
           <motion.form
