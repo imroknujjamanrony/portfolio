@@ -53,6 +53,7 @@ const Contact = () => {
           Get In Touch
         </h2>
         {/* hello world kemon acho sobai  */}
+        {/* hello world kemon acho sobai  */}
         <div className="grid md:grid-cols-2 gap-12">
           {/* Form */}
           <motion.form
