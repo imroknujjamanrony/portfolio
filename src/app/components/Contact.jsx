@@ -50,7 +50,7 @@ const Contact = () => {
         className="w-full max-w-6xl mx-auto"
       >
         <h2 className="text-4xl font-bold text-center mb-12 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
-          Get In Touch
+          Get In Touch with me
         </h2>
 
         <div className="grid md:grid-cols-2 gap-12">
