@@ -32,7 +32,7 @@ export const LoadingScreen = ({ onComplete }) => {
       <div className="w-[200px] h-[2px] bg-gray-800 rounded relative overflow-hidden">
         <div className="w-[40%] bg-blue-400 h-full  shadow-[0_0_15px_#3b82f6] animate-loading-bar"></div>
       </div>
-      <div>hh</div>
+      <div>hhgfhfhg</div>
     </div>
   );
 };
